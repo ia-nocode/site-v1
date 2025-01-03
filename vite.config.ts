@@ -4,22 +4,10 @@ import path from "path";
 import { componentTagger } from "lovable-tagger";
 
 export default defineConfig(({ mode }) => ({
-  base: mode === 'production' ? '/ia-nocode/' : '/',
+  base: mode === 'production' ? '/design-harmony-quest/' : '/',
   server: {
     host: "::",
     port: 8080,
-    headers: {
-      "Content-Type": "application/javascript",
-    },
-  },
-  build: {
-    rollupOptions: {
-      output: {
-        entryFileNames: 'assets/[name].js',
-        chunkFileNames: 'assets/[name].js',
-        assetFileNames: 'assets/[name].[ext]'
-      }
-    }
   },
   plugins: [
     react(),
